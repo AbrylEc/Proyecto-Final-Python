@@ -13,7 +13,3 @@ def biography(request):
 
 def gallery(request):
     return render(request, "core/gallery.html")
-
-
-def contact(request):
-    return render(request, "core/contact.html")

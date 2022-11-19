@@ -19,6 +19,10 @@ from django.urls import path, include
 urlpatterns = [
     # De la siguiente forma ya no es necesario colocar core/ antes de las búsquedas
     path('', include('core.urls')),
+    # urls contact
+    path('contact/', include('contact.urls')),
+    # urls gallery
+    # path('gallery/', include('gallery.urls')),
     # Si colocamos de esta forma 0path('core/', include('core.urls')),
     # tendremos que especificar primero core/gallery por ejemplo.
     path('admin/', admin.site.urls),
