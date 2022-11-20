@@ -1,6 +1,7 @@
 
 <!--Variety music--><!DOCTYPE html>
 <html class="wide wow-animation" lang="es">
+
   <head>
     <title>{%block title%}{%endblock%}</title>
     <meta name="format-detection" content="telephone=no">
@@ -75,42 +76,48 @@
       <!-- Page Footer-->
       
       <footer class="section footer-2">
+      <!--{{test-->
         <div class="container" style="text-align: center">
-          <div class="row">        
+          <div class="row">     
               <div class="col-lg-12" >
               <hr>
               <br>
-              <h5 class="text-white title">Contact Information</h5>
+              <h5 class="text-white title">Información de contacto</h5>
               <ul class="contact-box">
-                <li>
-                  <div class="unit unit-horizontal unit-spacing-xxs" style="text-align: center; margin-left:450px">
-                    <div class="unit-left"><span class="icon mdi mdi-map-marker accent-icon"></span></div>
-                    <div class="unit-body"><a href="#">2130 Fulton Street, <br class="veil reveal-lg-inline">San Diego, CA 94117-1080 USA</a></div>
+                
+                  <div class="text-center">
+                      <span class="icon mdi mdi-map-marker accent-icon"></span>
+                      <a href="">Gregorio Bobadilla, Quito 170510</a>
                   </div>
-                </li>
-                <li>
-                  <div class="unit unit-horizontal unit-spacing-xxs" style="text-align: center; margin-left:450px">
-                    <div class="unit-left"><span class="icon mdi mdi-phone accent-icon"></span></div>
-                    <div class="unit-body">
-                      <ul class="list-phones" >
-                        <li><a href="tel:#">1-800-1234-567</a></li>
-                        <li><a href="tel:#">1-800-1234-567</a></li>
-                      </ul>
+                  <div class="">
+                    <div class="text-center">
+                      <span class="icon mdi mdi-phone accent-icon"></span>
+                        <a href="{{LINK_WHATSAPP}}">+593 98-780-1396 </a>
+                    </div>
+                    <div class="unit-body">                     
                     </div>
                   </div>
-                </li>
-                <li>
-                  <div class="unit unit-horizontal unit-spacing-xxs" style="text-align: center; margin-left:450px">
-                    <div class="unit-left"><span class="icon mdi mdi-email-outline accent-icon"></span></div>
-                    <div class="unit-body"><a href="mailto:#">info@demolink.org</a></div>
-                  </div>
-                </li>
+                               
+                  <div class="">
+                    <div class="text-center">
+                      <span class="icon mdi mdi-email-outline accent-icon"></span>
+                      <a href="mailto:#">abrylmusic@hotmail.com</a>
+                    </div>
+                  </div>         
               </ul>
             <div class="group-md group-middle social-items">
-            <a class="icon icon-md novi-icon mdi mdi-facebook" href="#"></a>
-            <a class="icon icon-md novi-icon mdi mdi-twitter" href="#"></a>
-            <a class="icon icon-md novi-icon mdi mdi-instagram" href="#"></a>
-            <a class="icon icon-md novi-icon mdi mdi-whatsapp" href="#"></a>
+            {%if LINK_FACEBOOK %}
+            <a class="icon icon-md novi-icon mdi mdi-facebook" href="{{LINK_FACEBOOK}}"></a>
+            {%endif%} 
+            {%if LINK_INSTAGRAM %}
+            <a class="icon icon-md novi-icon mdi mdi-instagram" href="{{LINK_INSTAGRAM}}"></a>
+            {%endif%}
+            {%if LINK_TWITTER %}
+            <a class="icon icon-md novi-icon mdi mdi-twitter" href="{{LINK_TWITTER}}"></a>
+            {%endif%}     
+            {%if LINK_WHATSAPP %}
+            <a class="icon icon-md novi-icon mdi mdi-whatsapp" href="{{LINK_WHATSAPP}}"></a>
+            {%endif%}
             </div>
           </div>
         
@@ -119,9 +126,11 @@
           <br>
           <hr>
           <br>
-          <center><p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>ABRYL EC LTD</span> <a href="#"></a>
-          </p></center>
+          <p class="rights text-center"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>ABRYL EC LTD</span> <a href="#"></a>
+          </p>
         </div>
+        <div class="col-lg-2">
+              </div> 
       </footer>
     </div>
     <!-- Global Mailform Output-->

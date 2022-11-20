@@ -25,6 +25,12 @@ def contact(request):
             reply_to=[email]
         )
 
+        try:
+            email.send()
+            return redirect(reverse('contact')+"?ok")
+        except:
+            return redirect(reverse('contact')+"?fail")
+
     # Enviar mail
 
     return render(request, "contact/contact.html", {'contactForm': contactForm})

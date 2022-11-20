@@ -1,0 +1,122 @@
+
+      <!--Herencia templates-->
+{%extends 'core/base.html'%}
+{%block title%}Biografía{%endblock%}
+
+{%load static%}
+
+{%block content%}
+      
+      
+
+      <!-- Breadcrumbs -->
+      <section class="section section-bredcrumbs" style="background: url({% static 'core/images/breadcrumbs1-1920x440.jpg' %}) no-repeat center / cover">
+        <div class="container context-dark breadcrumb-wrapper text-left">
+          <h1>Biografía</h1>
+          <ul class="breadcrumbs-custom">
+            <li><a href="{%url 'home'%}">Inicio</a></li>
+            <li class="active">Biografía</li>
+          </ul>
+        </div>
+      </section>
+
+<!-- Base typography -->
+      <section class="section section-lg bg-default">
+        <div class="container">
+          <div class="row">
+          <div class="col-xl-2">
+          </div>
+            <div class="col-xl-8 text-justify">
+              <ul class="list-xl">
+                <li text-justify>
+                  <h2>Abryl Ec</h2>
+                  <p>Abryl (Johanna Paola Quinde Abril), cantante, compositora y modelo ecuatoriana, 
+                  nace el 1 de septiembre de 1992 en la ciudad de Cuenca – Ecuador en el lecho de una 
+                  familia conservadora, siendo la menor de cuatro hermanos. Realiza sus estudios primarios 
+                  y secundarios en la Unidad Educativa Salesiana María Auxiliadora (UESMaríaAuxiliadora) 
+                  donde inició su desarrollo musical formando parte del coro y grupos musicales de la institución 
+                  como vocalista, los mismos que fueron dirigidos por el Lcdo. Jhonny Vallejo Yépez quien fue parte 
+                  fundamental en el desarrollo de sus bases musicales, participando con los mismos en diversos 
+                  festivales y concursos intercolegiales.  Así mismo, fue invitada a formar parte de reconocidos 
+                  musicales tales como “José y el manto multicolor” realizado en la ciudad de Cuenca en el teatro 
+                  Carlos Crespi de la Universidad Politécnica Salesiana en el año 2009. <br><br>
+                  Al terminar sus estudios secundarios, cursó la carrera de Medicina en la Universidad Estatal de 
+                  Cuenca dónde al cabo de un año después, decide dejar la carrera y retomar de manera definitiva su 
+                  más grande pasión, la música, contando con el apoyo incondicional y total de su pilar de vida, su 
+                  madre Rocio Abril, siendo el lanzamiento oficial de su proyecto solista “Abryl” el día 11 de Abril
+                   del 2013 en el Teatro Sucre de su ciudad natal. Posteriormente se traslada a la ciudad de Quito 
+                   en donde comienza  sus estudios musicales en la Universidad de las Américas (UDLA). Es aquí en 
+                   dobde empieza a forjar sus pasos en este increible viaje musical.</p>
+                </li>
+                </li>
+              </ul>
+              <div class="col-xl-2">
+          </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>   
+
+      <!-- Your Career Starts Here-->
+      <section class="section section-lg bg-gray-100">
+        <div class="container text-center">
+          <h2 class="custom-title"><span><strong>TRAYECTORIA</strong></span></h2>
+          <!-- Owl Carousel-->
+          <div class="owl-carousel text-left" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-dots="false" data-nav="false" data-stage-padding="15" data-loop="true" data-margin="30" data-autoplay="true" data-mouse-drag="true">
+            {%for biography in events %}
+            <div class="timeline">
+              <div class="date">{{biography.published}}</div>
+              <div class="line"></div><a class="media-item" href="#"><img src="{{biography.image.url}}" alt="" width="100" height="72"/></a>
+              <h6 class="title">{{biography.title}}</h6>
+              <p class="content">{{biography.content}}</p>
+            </div>
+            {%endfor%}           
+        </div>
+      </section>
+
+      <!-- Testimonials
+      <section class="section section-lg">
+        <div class="container text-center">
+          <h2 class="custom-title"><span>Testimonials</span></h2>-->
+          <!-- Owl Carousel
+          <div class="owl-carousel owl-carousel-1" data-items="1" data-dots="true" data-nav="true" data-md-stage-padding="0" data-loop="true" data-autoplay="true" data-margin="30" data-mouse-drag="false">
+            <blockquote class="quote quote-large">
+              <div class="quote-meta"><img class="img-bordered" src="{% static 'core/images/index-1-3-220x220.jpg' %}" alt="" width="220" height="220"/>
+              </div>
+              <div class="quote-body">
+                <div class="author heading-6">
+                  <cite>Marie Hanson</cite>
+                </div>
+                <div class="position">Regular Listener</div>
+                <q class="heading-5">Tortor vitae purus fau2cibus ornare suspendisse sed. Integer quis auctor elit sed. Etiam dignissim diam quis enim.</q>
+              </div>
+            </blockquote>
+            <blockquote class="quote quote-large">
+              <div class="quote-meta"><img class="img-bordered" src="{% static 'core/images/index-1-4-220x220.jpg' %}" alt="" width="220" height="220"/>
+              </div>
+              <div class="quote-body">
+                <div class="author heading-6">
+                  <cite>Grace Jones</cite>
+                </div>
+                <div class="position">Regular Listener</div>
+                <q class="heading-5">Habitant morbi tristique senectus et netus et malesuada. Libero enim sed faucibus turpis in. Volutpat ac tincidunt vitae semper quis.</q>
+              </div>
+            </blockquote>
+            <blockquote class="quote quote-large">
+              <div class="quote-meta"><img class="img-bordered" src="{% static 'core/images/index-1-5-220x220.jpg' %}" alt="" width="220" height="220"/>
+              </div>
+              <div class="quote-body">
+                <div class="author heading-6">
+                  <cite>Ann Smith</cite>
+                </div>
+                <div class="position">Regular Listener</div>
+                <q class="heading-5">Tortor vitae purus faucibus ornare suspendisse sed. Integer quis auctor elit sed. Etiam dignissim diam quis enim.</q>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+      </section>-->
+
+{%endblock%}
+     

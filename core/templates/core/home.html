@@ -14,7 +14,7 @@
               <div class="container">
                 <div class="row justify-content-lg-left">
                   <div class="col-md-12 col-xl-10">
-                    <h1 data-caption-animate="fadeInUp" data-caption-delay="100">Abryl Ec</h1><a class="button button-lg button-primary" href="{%url 'biography'%}" data-caption-animate="fadeInUp" data-caption-delay="450">Learn More</a>
+                    <h1 data-caption-animate="fadeInUp" data-caption-delay="100">Abryl Ec</h1><a class="button button-lg button-primary" href="{%url 'biography'%}" data-caption-animate="fadeInUp" data-caption-delay="450">Acerca de mí</a>
                   </div>
                 </div>
               </div>
@@ -23,12 +23,26 @@
         </div>
         <div class="swiper-meta">
           <ul class="links">
-            <li><a class="icon icon-meta mdi mdi-facebook" href="#"></a></li>
-            <li><a class="icon icon-meta mdi mdi-instagram" href="#"></a></li>
-            <li><a class="icon icon-meta mdi mdi-whatsapp" href="#"></a></li>           
-            <li><a class="icon icon-meta mdi mdi-twitter" href="#"></a></li>
-
-         
+            <li>
+            {%if LINK_FACEBOOK %}
+            <a class="link icon icon-meta mdi mdi-facebook" href="{{LINK_FACEBOOK}}"></a>
+            {%endif%}
+            </li>
+            <li>
+            {%if LINK_INSTAGRAM%}
+            <a class="link icon icon-meta mdi mdi-instagram" href="{{LINK_INSTAGRAM}}"></a>
+            {%endif%}
+            </li>
+            <li>
+            {%if LINK_WHATSAPP %}
+            <a class="link icon icon-meta mdi mdi-whatsapp" href="{{LINK_WHATSAPP}}"></a>
+            {%endif%}
+            </li>           
+            <li>
+            {%if LINK_TWITTER %}
+            <a class="link icon icon-meta mdi mdi-twitter" href="{{LINK_TWITTER}}"></a>
+            {%endif%}
+            </li>        
           </ul>
         </div>
       </section>

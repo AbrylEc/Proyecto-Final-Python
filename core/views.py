@@ -9,7 +9,3 @@ def home(request):
 
 def biography(request):
     return render(request, "core/biography.html")
-
-
-def gallery(request):
-    return render(request, "core/gallery.html")
